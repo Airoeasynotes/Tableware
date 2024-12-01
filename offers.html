@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special Offers | TableWare Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Countdown Timer Script
+        function startCountdown(endTime, elementId) {
+            function updateTimer() {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor(
+                    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                );
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById(elementId).innerHTML = `
+                    ${days}d ${hours}h ${minutes}m ${seconds}s
+                `;
+
+                if (distance < 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById(elementId).innerHTML = "Expired";
+                }
+            }
+
+            const timerInterval = setInterval(updateTimer, 1000);
+            updateTimer();
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            startCountdown(new Date().getTime() + 86400000, "countdown1");
+            startCountdown(new Date().getTime() + 172800000, "countdown2");
+        });
+    </script>
+    <style>
+        @keyframes fade-bounce {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateY(-10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-bounce {
+            animation: fade-bounce 2s ease-in-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-3xl font-extrabold text-gray-900">
+                TableWare <span class="text-green-400">Store</span>
+            </h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-lg font-medium text-gray-700 hover:text-green-500">Home</a>
+                <a href="#" class="text-lg font-medium text-gray-700 hover:text-green-500">Products</a>
+                <a href="#" class="text-lg font-medium text-gray-700 hover:text-green-500">Offers</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Offers Section -->
+    <main class="container mx-auto my-8 px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6 animate-fade-bounce">
+            Special Offers Just for You!
+        </h2>
+
+        <!-- Carousel -->
+        <div class="relative bg-white rounded-lg shadow overflow-hidden">
+            <div class="relative h-60 overflow-hidden">
+                <div class="absolute inset-0">
+                    <img
+                        src="https://via.placeholder.com/800x400"
+                        alt="Limited Offer"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+                <div class="absolute inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
+                    <h3 class="text-white text-2xl font-bold">
+                        Up to 50% Off on Eco Plates!
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Limited-Time Deals -->
+        <section class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Offer Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                <h3 class="text-lg font-bold text-green-500 mb-2">Eco-Friendly Glasses</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Durable and stylish glasses for every occasion. 
+                </p>
+                <div class="mb-4 flex items-center space-x-2">
+                    <span class="text-gray-700 font-bold text-xl">₹199</span>
+                    <span class="text-gray-500 line-through">₹299</span>
+                </div>
+                <div>
+                    <p class="text-gray-600 text-sm">Offer expires in:</p>
+                    <p id="countdown1" class="text-red-500 font-semibold"></p>
+                </div>
+                <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+                    Grab Offer
+                </button>
+            </div>
+
+            <!-- Offer Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                <h3 class="text-lg font-bold text-blue-500 mb-2">Napkin Combos</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Perfect for events and parties. Soft and eco-friendly!
+                </p>
+                <div class="mb-4 flex items-center space-x-2">
+                    <span class="text-gray-700 font-bold text-xl">₹149</span>
+                    <span class="text-gray-500 line-through">₹249</span>
+                </div>
+                <div>
+                    <p class="text-gray-600 text-sm">Offer expires in:</p>
+                    <p id="countdown2" class="text-red-500 font-semibold"></p>
+                </div>
+                <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+                    Claim Now
+                </button>
+            </div>
+
+            <!-- Offer Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                <h3 class="text-lg font-bold text-purple-500 mb-2">Reusable Cups</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                    Keep beverages warm or cold with style.
+                </p>
+                <div class="mb-4 flex items-center space-x-2">
+                    <span class="text-gray-700 font-bold text-xl">₹299</span>
+                    <span class="text-gray-500 line-through">₹399</span>
+                </div>
+                <div>
+                    <p class="text-gray-600 text-sm">Limited stock available!</p>
+                </div>
+                <button class="mt-4 bg-purple-500 text-white py-2 px-4 rounded hover:bg-purple-600">
+                    Shop Now
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="container mx-auto px-6 lg:flex lg:justify-between lg:items-center">
+        <!-- Logo & Description -->
+        <div class="lg:w-1/3 mb-6 lg:mb-0">
+            <div class="flex items-center space-x-3">
+                <div class="bg-green-500 text-white p-3 rounded-full shadow">
+                    <i class="fas fa-leaf text-2xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-white">
+                    TableWare <span class="text-green-400">Store</span>
+                </h1>
+            </div>
+            <p class="text-sm mt-4">
+                Your go-to store for eco-friendly and stylish tableware. We are here to make dining sustainable and fashionable!
+            </p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="lg:w-1/3 mb-6 lg:mb-0 animate-fade-up">
+            <h3 class="text-xl font-bold text-white mb-4">Contact Us</h3>
+            <ul>
+                <li class="flex items-center mb-3">
+                    <i class="fas fa-phone-alt text-green-400 mr-3"></i>
+                    <span>+91 98765 43210</span>
+                </li>
+                <li class="flex items-center mb-3">
+                    <i class="fas fa-envelope text-green-400 mr-3"></i>
+                    <span>support@tablewarestore.com</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-map-marker-alt text-green-400 mr-3"></i>
+                    <span>123 Eco Street, Green City, India</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="lg:w-1/3">
+            <h3 class="text-xl font-bold text-white mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+                <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-green-400 hover:bg-green-500 hover:text-white transition-all"
+                >
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-green-400 hover:bg-green-500 hover:text-white transition-all"
+                >
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-green-400 hover:bg-green-500 hover:text-white transition-all"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-green-400 hover:bg-green-500 hover:text-white transition-all"
+                >
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-8 border-t border-gray-700 pt-6 text-center">
+        <p class="text-sm text-gray-500">
+            &copy; 2024 TableWare Store. All rights reserved. | Designed with ❤️ by 26softcreations
+        </p>
+    </div>
+</footer>
+
+<!-- Animations -->
+<style>
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-up {
+        animation: fade-up 1.5s ease-out forwards;
+    }
+</style>
+</body>
+</html>

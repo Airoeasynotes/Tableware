@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover eco-friendly and stylish tableware at TableWare Store. From plates to cups, explore a wide range of sustainable products." />
+    <title>TableWare Store | Eco-Friendly Tableware</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        rel="stylesheet"
+    />
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <!-- Logo Section -->
+        <div class="flex items-center space-x-3">
+            <div class="bg-green-400 text-white p-3 rounded-full shadow">
+                <i class="fas fa-leaf text-xl"></i>
+            </div>
+            <h1 class="text-3xl font-extrabold text-gray-900">
+                TableWare <span class="text-green-400">Store</span>
+            </h1>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-6">
+            <a href="#home" class="text-lg font-medium text-gray-700 hover:text-green-500 transition-colors">Home</a>
+            <a href="#products" class="text-lg font-medium text-gray-700 hover:text-green-500 transition-colors">Products</a>
+            <a href="#categories" class="text-lg font-medium text-gray-700 hover:text-green-500 transition-colors">Categories</a>
+            <a href="#about" class="text-lg font-medium text-gray-700 hover:text-green-500 transition-colors">About Us</a>
+            <a href="#contact" class="text-lg font-medium text-gray-700 hover:text-green-500 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Cart Button -->
+        <div class="flex items-center">
+            <button
+                class="relative bg-gray-100 hover:bg-gray-200 p-2 rounded-full text-gray-500 focus:outline-none"
+            >
+                <i class="fas fa-shopping-cart"></i>
+                <span
+                    class="absolute -top-1 -right-1 bg-green-400 text-white text-xs rounded-full px-1"
+                >
+                    3
+                </span>
+            </button>
+        </div>
+    </div>
+</header>
+<section class="bg-gray-100 text-gray-800 py-20">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-4">
+            <span class="animate-fade-in text-green-500">Eco-Friendly. </span>
+            <span class="animate-bounce text-gray-700">Affordable. </span>
+            <span class="animate-fade-in text-green-400">Stylish.</span>
+        </h2>
+        <p class="text-lg font-light max-w-xl mx-auto animate-slide-in text-gray-600">
+            Discover the perfect tableware solutions designed to complement your style while caring for the planet.
+        </p>
+    </div>
+</section>
+
+<style>
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slide-in {
+        from {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 2s ease-in-out infinite alternate;
+    }
+
+    .animate-fade-up {
+        animation: fade-up 2s ease-in-out infinite alternate;
+    }
+
+    .animate-slide-in {
+        animation: slide-in 1.5s ease-in-out forwards;
+    }
+
+    .animate-bounce {
+        animation: bounce 1.5s infinite;
+    }
+</style>
+    <!-- Main Content -->
+    <main class="container mx-auto mt-4 px-6">
+        <!-- Featured Products -->
+        <section class="bg-green-100 rounded-lg p-6">
+    <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Featured Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product Card: Paper Plates -->
+        <div
+            class="relative group bg-gray-50 p-4 rounded-lg shadow hover:shadow-lg transition-all transform hover:-translate-y-2"
+        >
+            <div class="w-full h-40 bg-gray-300 rounded-t-lg flex items-center justify-center">
+                <span class="text-gray-500">Image 1</span>
+            </div>
+            <div class="absolute top-2 right-2 bg-green-400 text-white text-xs px-2 py-1 rounded-full">New</div>
+            <div class="mt-4 text-center">
+                <h3 class="text-lg font-semibold text-gray-800 group-hover:text-green-400">Paper Plates</h3>
+                <p class="text-sm text-gray-600 mt-2">Eco-friendly and durable for all occasions.</p>
+            </div>
+        </div>
+
+        <!-- Product Card: Napkins -->
+        <div
+            class="relative group bg-gray-50 p-4 rounded-lg shadow hover:shadow-lg transition-all transform hover:-translate-y-2"
+        >
+            <div class="w-full h-40 bg-gray-300 rounded-t-lg flex items-center justify-center">
+                <span class="text-gray-500">Image 2</span>
+            </div>
+            <div class="absolute top-2 right-2 bg-blue-400 text-white text-xs px-2 py-1 rounded-full">Bestseller</div>
+            <div class="mt-4 text-center">
+                <h3 class="text-lg font-semibold text-gray-800 group-hover:text-blue-400">Napkins</h3>
+                <p class="text-sm text-gray-600 mt-2">Soft, absorbent, and perfect for your needs.</p>
+            </div>
+        </div>
+
+        <!-- Product Card: Cups -->
+        <div
+            class="relative group bg-gray-50 p-4 rounded-lg shadow hover:shadow-lg transition-all transform hover:-translate-y-2"
+        >
+            <div class="w-full h-40 bg-gray-300 rounded-t-lg flex items-center justify-center">
+                <span class="text-gray-500">Image 3</span>
+            </div>
+            <div class="absolute top-2 right-2 bg-red-400 text-white text-xs px-2 py-1 rounded-full">Hot</div>
+            <div class="mt-4 text-center">
+                <h3 class="text-lg font-semibold text-gray-800 group-hover:text-red-400">Cups</h3>
+                <p class="text-sm text-gray-600 mt-2">Stylish cups for hot and cold beverages.</p>
+            </div>
+        </div>
+
+        <!-- Product Card: Glasses -->
+        <div
+            class="relative group bg-gray-50 p-4 rounded-lg shadow hover:shadow-lg transition-all transform hover:-translate-y-2"
+        >
+            <div class="w-full h-40 bg-gray-300 rounded-t-lg flex items-center justify-center">
+                <span class="text-gray-500">Image 4</span>
+            </div>
+            <div class="absolute top-2 right-2 bg-purple-400 text-white text-xs px-2 py-1 rounded-full">Limited</div>
+            <div class="mt-4 text-center">
+                <h3 class="text-lg font-semibold text-gray-800 group-hover:text-purple-400">Glasses</h3>
+                <p class="text-sm text-gray-600 mt-2">Perfect for elegant dining experiences.</p>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Explore Categories -->
+        <section class="bg-white rounded-lg p-6 mt-6">
+            <h2 class="text-xl font-semibold mb-4 text-center text-gray-800">Explore Our Categories</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Category Cards -->
+                <div
+                    class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition-transform transform hover:scale-105"
+                    role="button"
+                    aria-label="Explore Plates"
+                >
+                    <i class="fas fa-utensils text-green-400 text-4xl mb-4"></i>
+                    <h3 class="text-gray-700 font-semibold text-center">Plates</h3>
+                </div>
+                <div
+                    class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition-transform transform hover:scale-105"
+                    role="button"
+                    aria-label="Explore Eco Cups"
+                >
+                    <i class="fas fa-coffee text-blue-400 text-4xl mb-4"></i>
+                    <h3 class="text-gray-700 font-semibold text-center">Eco Cups</h3>
+                </div>
+                <div
+                    class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition-transform transform hover:scale-105"
+                    role="button"
+                    aria-label="Explore Cutlery"
+                >
+                    <i class="fas fa-concierge-bell text-yellow-400 text-4xl mb-4"></i>
+                    <h3 class="text-gray-700 font-semibold text-center">Cutlery</h3>
+                </div>
+                <div
+                    class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition-transform transform hover:scale-105"
+                    role="button"
+                    aria-label="Explore Combos"
+                >
+                    <i class="fas fa-gift text-red-400 text-4xl mb-4"></i>
+                    <h3 class="text-gray-700 font-semibold text-center">Combos</h3>
+                </div>
+                <div
+                    class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition-transform transform hover:scale-105"
+                    role="button"
+                    aria-label="Explore Special Offers"
+                >
+                    <i class="fas fa-tags text-purple-400 text-4xl mb-4"></i>
+                    <h3 class="text-gray-700 font-semibold text-center">Special Offers</h3>
+                </div>
+            </div>
+        </section>
+           <style>
+        @keyframes slide-in-left {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slide-in-right {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-slide-in-left {
+            animation: slide-in-left 1.5s ease-out forwards;
+        }
+
+        .animate-slide-in-right {
+            animation: slide-in-right 1.5s ease-out forwards;
+        }
+    </style>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- About Us Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6 lg:flex lg:items-center lg:space-x-12">
+            <!-- Content Section -->
+            <div class="lg:w-1/2 animate-slide-in-right">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    About <span class="text-green-500">TableWare Store</span>
+                </h2>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    At <span class="font-semibold text-green-500">TableWare Store</span>, 
+                    we are passionate about creating sustainable and eco-friendly tableware solutions that cater to both functionality and style. Established with a vision to make everyday dining better, we provide a range of products designed to minimize environmental impact without compromising on quality or aesthetics.
+                </p>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    From biodegradable plates to stylish reusable cups, we aim to help you embrace an eco-conscious lifestyle while elevating your dining experience.
+                </p>
+                <div class="flex items-center space-x-6">
+                    <!-- Mission -->
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-green-500 p-4 rounded-full shadow text-white">
+                            <i class="fas fa-leaf text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800">Our Mission</h3>
+                            <p class="text-gray-600 text-sm">
+                                To inspire sustainable living through innovative tableware solutions.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Vision -->
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-blue-500 p-4 rounded-full shadow text-white">
+                            <i class="fas fa-globe text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800">Our Vision</h3>
+                            <p class="text-gray-600 text-sm">
+                                A world where eco-conscious choices are the norm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="mt-8 bg-green-500 text-white py-2 px-6 rounded hover:bg-green-600 transition-all">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="container mx-auto px-6 lg:flex lg:justify-between lg:items-center">
+        <!-- Logo & Description -->
+        <div class="lg:w-1/3 mb-6 lg:mb-0">
+            <div class="flex items-center space-x-3">
+                <div class="bg-green-500 text-white p-3 rounded-full shadow">
+                    <i class="fas fa-leaf text-2xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-white">
+                    TableWare <span class="text-green-400">Store</span>
+                </h1>
+            </div>
+            <p class="text-sm mt-4">
+                Your go-to store for eco-friendly and stylish tableware. We are here to make dining sustainable and fashionable!
+            </p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="lg:w-1/3 mb-6 lg:mb-0 animate-fade-up">
+            <h3 class="text-xl font-bold text-white mb-4">Contact Us</h3>
+            <ul>
+                <li class="flex items-center mb-3">
+                    <i class="fas fa-phone-alt text-green-400 mr-3"></i>
+                    <span>+91 98765 43210</span>
+                </li>
+                <li class="flex items-center mb-3">
+                    <i class="fas fa-envelope text-green-400 mr-3"></i>
+                    <span>support@tablewarestore.com</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-map-marker-alt text-green-400 mr-3"></i>
+                    <span>123 Eco Street, Green City, India</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="lg:w-1/3">
+            <h3 class="text-xl font-bold text-white mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+                <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-green-400 hover:bg-green-500 hover:text-white transition-all"
+                >
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-green-400 hover:bg-green-500 hover:text-white transition-all"
+                >
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-green-400 hover:bg-green-500 hover:text-white transition-all"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-green-400 hover:bg-green-500 hover:text-white transition-all"
+                >
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-8 border-t border-gray-700 pt-6 text-center">
+        <p class="text-sm text-gray-500">
+            &copy; 2024 TableWare Store. All rights reserved. | Designed with ❤️ by 26softcreations
+        </p>
+    </div>
+</footer>
+
+<!-- Animations -->
+<style>
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-up {
+        animation: fade-up 1.5s ease-out forwards;
+    }
+</style>
+<script>
+    // Navigate to the cart page
+    document.querySelector(".fa-shopping-cart").parentElement.addEventListener("click", () => {
+        window.location.href = "cart.html"; // Replace 'cart.html' with your cart page URL
+    });
+
+    // Add click event listeners for category cards
+    document.querySelectorAll("[aria-label]").forEach(card => {
+        card.addEventListener("click", () => {
+            const category = card.getAttribute("aria-label");
+            // Redirect based on the category
+            switch (category) {
+                case "Explore Plates":
+                    window.location.href = "products.html"; // Replace with your Plates page URL
+                    break;
+                case "Explore Eco Cups":
+                    window.location.href = "products.html"; // Replace with your Eco Cups page URL
+                    break;
+                case "Explore Cutlery":
+                    window.location.href = "products.html"; // Replace with your Cutlery page URL
+                    break;
+                case "Explore Combos":
+                    window.location.href = "products.html"; // Replace with your Combos page URL
+                    break;
+                case "Explore Special Offers":
+                    window.location.href = "offers.html"; // Replace with your Special Offers page URL
+                    break;
+                default:
+                    alert("Page not found");
+            }
+        });
+    });
+</script>
+</body>
+</html>
